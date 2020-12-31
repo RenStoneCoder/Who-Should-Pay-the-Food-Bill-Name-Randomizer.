@@ -1,0 +1,15 @@
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+
+name_number = int(len(names)) 
+#inputted names counted and turned into integer
+
+import random
+number_pick = random.randint(0,name_number - 1) 
+#we want a random integer between 0 and the (total number of people listed -1) since the list starts at 0. There may be 3 people in the list but someone is going to be labeled 0, so really our max range will be 2, and not 3. The end of the list is -1 from the total of number items due to Python starting their count from 0.
+
+winner = names[number_pick]
+#We plug this random integer into the list so it finds the person associated with that number
+
+print(f"{winner}, you are paying the bill today!")
